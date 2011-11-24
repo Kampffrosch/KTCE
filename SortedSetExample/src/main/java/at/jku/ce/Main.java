@@ -15,7 +15,7 @@ public class Main {
 		objectSet.add(new DomainObject("Paula","asdf"));
 		objectSet.add(new DomainObject("Claudia","asdf"));
 		for (DomainObject domainObject : objectSet) {
-			LOGGER.debug(domainObject.id);
+			LOGGER.debug(domainObject.getUuid());
 		}
 	}
 
