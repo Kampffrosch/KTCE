@@ -14,13 +14,15 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		Set<DomainObject> objectSet = new HashSet<DomainObject>();
 		Set<DomainObject> objectSet = new TreeSet<DomainObject>(new DomainObjectComparator());
-		objectSet.add(new DomainObject("Helga","asdf"));
-		objectSet.add(new DomainObject("Walter","asdf"));
-		objectSet.add(new DomainObject("Hans","asdf"));
-		objectSet.add(new DomainObject("Paula","asdf"));
-		objectSet.add(new DomainObject("Claudia","asdf"));
+		objectSet.add(DomainFactory.createDomainObject("Helga","asdf"));
+		objectSet.add(DomainFactory.createDomainObject("Walter","asdf"));
+		objectSet.add(DomainFactory.createDomainObject("Hans","asdf"));
+		objectSet.add(DomainFactory.createDomainObject("Paula","asdf"));
+		objectSet.add(DomainFactory.createDomainObject("Claudia","asdf"));
 		for (DomainObject domainObject : objectSet) {
+			LOGGER.debug(domainObject.getUuid());
 			LOGGER.debug(domainObject.toString());
 		}
 	}
