@@ -1,9 +1,11 @@
 package at.jku.ce;
 
+import java.util.UUID;
+
 public class DomainObject {
 
 
-	private String uuid = UUID.randomUUID().toString()
+	private String uuid = UUID.randomUUID().toString();
 	private String name;
 	private String comment;
 
@@ -42,5 +44,5 @@ public class DomainObject {
 	public String toString() {
 		return "DomainObject [name=" + name + ", comment=" + comment + ", uuid=" + uuid + "]";
 	}
-	}
+	
 }
