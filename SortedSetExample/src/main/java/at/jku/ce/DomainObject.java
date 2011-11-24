@@ -7,7 +7,7 @@ public class DomainObject {
 	private String name;
 	private String comment;
 
-	public DomainObject(String id) {
+	protected DomainObject(String id) {
 		super();
 		this.uuid = id;
 	}
@@ -15,7 +15,7 @@ public class DomainObject {
 	/**
 	 * Default constructor
 	 */
-	public DomainObject(String name, String comment) {
+	protected DomainObject(String name, String comment) {
 		super();
 	}
 
